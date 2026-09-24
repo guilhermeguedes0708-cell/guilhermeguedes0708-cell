@@ -2,13 +2,17 @@
 #
 
 <h2>👋 Sobre mim</h2>
+
 <p>
-Olá! Eu sou o Guilherme, estudante de Análise e Desenvolvimento de Sistemas no Instituto Federal de São Paulo.
-Tenho interesse por tecnologia e desenvolvimento de software, e estou sempre buscando aprender algo novo e transformar ideias em projetos.
+Olá! Eu sou o Guilherme, estudante de Análise e Desenvolvimento de Sistemas no IFSP, apaixonado por tecnologia e sempre buscando aprender e evoluir na área de desenvolvimento.
 </p>
 
 <p>
-Atualmente, estou desenvolvendo meus conhecimentos em programação e explorando diferentes áreas da tecnologia. 🚀
+Atualmente, tenho conhecimentos em <strong>C, Python, HTML e CSS</strong>, que venho desenvolvendo por meio dos meus estudos e da criação de projetos. Gosto de colocar o que aprendo em prática, explorar novas tecnologias e transformar ideias em soluções através da programação.
+</p>
+
+<p>
+🚀 Estou no início da minha trajetória profissional e sigo aprimorando minhas habilidades a cada novo desafio.
 </p>
 
 <p align="center">
