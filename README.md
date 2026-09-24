@@ -1,16 +1,13 @@
-## Hi there 👋
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?font=Anton&color=ffffff&size=35&center=true&vCenter=true&width=1000&lines=[=++Welcome,+To+My+Profile!++=])](https://git.io/typing-svg)
+#
+<p align="center">
+  <img src=".github/workflows/duque github (1280 x 320 px).gif" />
+</p>
+</h3>
 
-<!--
-**guilhermeguedes0708-cell/guilhermeguedes0708-cell** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+#
+<p align="left">
+Olá Meu Nome é Guilherme e sou estudante de Análise e Desenvolvimento de Sistemas.
+Estou sempre buscando aprender mais sobre programação e tecnologia
 
-Here are some ideas to get you started:
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
