@@ -1,78 +1,873 @@
-<svg width="800" height="180"
-     viewBox="0 0 800 180"
+<svg width="800" height="300"
+     viewBox="0 0 800 300"
      xmlns="http://www.w3.org/2000/svg">
 
-  <style>
-    .ball {
-      fill: #ff9d00;
-      stroke: #ffcc4d;
-      stroke-width: 3;
-      animation: glow 1.5s infinite alternate;
+<defs>
+
+  <!-- Brilho das esferas -->
+  <filter id="glow" x="-150%" y="-150%" width="400%" height="400%">
+    <feGaussianBlur stdDeviation="7" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Clarão -->
+  <radialGradient id="flashGradient">
+    <stop offset="0%" stop-color="white"/>
+    <stop offset="30%" stop-color="#fff59d"/>
+    <stop offset="65%" stop-color="#ffb300" stop-opacity=".7"/>
+    <stop offset="100%" stop-color="#ff9800" stop-opacity="0"/>
+  </radialGradient>
+
+</defs>
+
+<style>
+
+  /* =========================
+     DRAGON BALLS
+     ========================= */
+
+  .ball {
+    fill: #ff9800;
+    stroke: #ffd54f;
+    stroke-width: 3;
+  }
+
+  .star {
+    fill: #c62828;
+    font-size: 23px;
+    text-anchor: middle;
+  }
+
+  .dragonball {
+    opacity: 0;
+    transform-box: view-box;
+    transform-origin: center;
+  }
+
+
+  /* =========================
+     ANIMAÇÕES INDIVIDUAIS
+     ========================= */
+
+  .b1 {
+    animation: move1 14s infinite;
+  }
+
+  .b2 {
+    animation: move2 14s infinite;
+  }
+
+  .b3 {
+    animation: move3 14s infinite;
+  }
+
+  .b4 {
+    animation: move4 14s infinite;
+  }
+
+  .b5 {
+    animation: move5 14s infinite;
+  }
+
+  .b6 {
+    animation: move6 14s infinite;
+  }
+
+  .b7 {
+    animation: move7 14s infinite;
+  }
+
+
+  /* 1 */
+
+  @keyframes move1 {
+
+    0% {
+      opacity:0;
+      transform:scale(0);
     }
 
-    .star {
-      fill: #d62828;
-      font-size: 25px;
-      text-anchor: middle;
+    6% {
+      opacity:1;
+      transform:scale(1.15);
     }
 
-    @keyframes glow {
-      from {
-        filter: drop-shadow(0 0 2px #ff9d00);
-      }
-      to {
-        filter: drop-shadow(0 0 10px #ffd500);
-      }
+    9%,55% {
+      opacity:1;
+      transform:scale(1);
+      filter:none;
     }
-  </style>
 
-  <!-- 1 estrela -->
-  <circle class="ball" cx="80" cy="90" r="42"/>
-  <text class="star" x="80" y="99">★</text>
+    60% {
+      filter:url(#glow);
+    }
 
-  <!-- 2 estrelas -->
-  <circle class="ball" cx="185" cy="90" r="42"/>
-  <text class="star" x="175" y="99">★</text>
-  <text class="star" x="195" y="99">★</text>
+    68% {
+      transform:translate(280px,70px) scale(.65);
+      filter:url(#glow);
+      opacity:1;
+    }
 
-  <!-- 3 estrelas -->
-  <circle class="ball" cx="290" cy="90" r="42"/>
-  <text class="star" x="290" y="82">★</text>
-  <text class="star" x="278" y="105">★</text>
-  <text class="star" x="302" y="105">★</text>
+    75% {
+      opacity:0;
+    }
 
-  <!-- 4 estrelas -->
-  <circle class="ball" cx="395" cy="90" r="42"/>
-  <text class="star" x="383" y="82">★</text>
-  <text class="star" x="407" y="82">★</text>
-  <text class="star" x="383" y="105">★</text>
-  <text class="star" x="407" y="105">★</text>
+    100% {
+      opacity:0;
+    }
+  }
 
-  <!-- 5 estrelas -->
-  <circle class="ball" cx="500" cy="90" r="42"/>
-  <text class="star" x="488" y="78">★</text>
-  <text class="star" x="512" y="78">★</text>
-  <text class="star" x="500" y="98">★</text>
-  <text class="star" x="488" y="116">★</text>
-  <text class="star" x="512" y="116">★</text>
 
-  <!-- 6 estrelas -->
-  <circle class="ball" cx="605" cy="90" r="42"/>
-  <text class="star" x="593" y="75">★</text>
-  <text class="star" x="617" y="75">★</text>
-  <text class="star" x="593" y="98">★</text>
-  <text class="star" x="617" y="98">★</text>
-  <text class="star" x="593" y="121">★</text>
-  <text class="star" x="617" y="121">★</text>
+  /* 2 */
 
-  <!-- 7 estrelas -->
-  <circle class="ball" cx="710" cy="90" r="42"/>
-  <text class="star" x="698" y="72">★</text>
-  <text class="star" x="722" y="72">★</text>
-  <text class="star" x="686" y="95">★</text>
-  <text class="star" x="710" y="95">★</text>
-  <text class="star" x="734" y="95">★</text>
-  <text class="star" x="698" y="118">★</text>
-  <text class="star" x="722" y="118">★</text>
+  @keyframes move2 {
+
+    0%,6% {
+      opacity:0;
+      transform:scale(0);
+    }
+
+    12% {
+      opacity:1;
+      transform:scale(1.15);
+    }
+
+    15%,55% {
+      opacity:1;
+      transform:scale(1);
+      filter:none;
+    }
+
+    60% {
+      filter:url(#glow);
+    }
+
+    68% {
+      transform:translate(200px,100px) scale(.65);
+      filter:url(#glow);
+      opacity:1;
+    }
+
+    75% {
+      opacity:0;
+    }
+
+    100% {
+      opacity:0;
+    }
+  }
+
+
+  /* 3 */
+
+  @keyframes move3 {
+
+    0%,12% {
+      opacity:0;
+      transform:scale(0);
+    }
+
+    18% {
+      opacity:1;
+      transform:scale(1.15);
+    }
+
+    21%,55% {
+      opacity:1;
+      transform:scale(1);
+      filter:none;
+    }
+
+    60% {
+      filter:url(#glow);
+    }
+
+    68% {
+      transform:translate(110px,115px) scale(.65);
+      filter:url(#glow);
+      opacity:1;
+    }
+
+    75% {
+      opacity:0;
+    }
+
+    100% {
+      opacity:0;
+    }
+  }
+
+
+  /* 4 */
+
+  @keyframes move4 {
+
+    0%,18% {
+      opacity:0;
+      transform:scale(0);
+    }
+
+    24% {
+      opacity:1;
+      transform:scale(1.15);
+    }
+
+    27%,55% {
+      opacity:1;
+      transform:scale(1);
+      filter:none;
+    }
+
+    60% {
+      filter:url(#glow);
+    }
+
+    68% {
+      transform:translate(5px,120px) scale(.65);
+      filter:url(#glow);
+      opacity:1;
+    }
+
+    75% {
+      opacity:0;
+    }
+
+    100% {
+      opacity:0;
+    }
+  }
+
+
+  /* 5 */
+
+  @keyframes move5 {
+
+    0%,24% {
+      opacity:0;
+      transform:scale(0);
+    }
+
+    30% {
+      opacity:1;
+      transform:scale(1.15);
+    }
+
+    33%,55% {
+      opacity:1;
+      transform:scale(1);
+      filter:none;
+    }
+
+    60% {
+      filter:url(#glow);
+    }
+
+    68% {
+      transform:translate(-100px,115px) scale(.65);
+      filter:url(#glow);
+      opacity:1;
+    }
+
+    75% {
+      opacity:0;
+    }
+
+    100% {
+      opacity:0;
+    }
+  }
+
+
+  /* 6 */
+
+  @keyframes move6 {
+
+    0%,30% {
+      opacity:0;
+      transform:scale(0);
+    }
+
+    36% {
+      opacity:1;
+      transform:scale(1.15);
+    }
+
+    39%,55% {
+      opacity:1;
+      transform:scale(1);
+      filter:none;
+    }
+
+    60% {
+      filter:url(#glow);
+    }
+
+    68% {
+      transform:translate(-200px,100px) scale(.65);
+      filter:url(#glow);
+      opacity:1;
+    }
+
+    75% {
+      opacity:0;
+    }
+
+    100% {
+      opacity:0;
+    }
+  }
+
+
+  /* 7 */
+
+  @keyframes move7 {
+
+    0%,36% {
+      opacity:0;
+      transform:scale(0);
+    }
+
+    42% {
+      opacity:1;
+      transform:scale(1.15);
+    }
+
+    45%,55% {
+      opacity:1;
+      transform:scale(1);
+      filter:none;
+    }
+
+    60% {
+      filter:url(#glow);
+    }
+
+    68% {
+      transform:translate(-280px,70px) scale(.65);
+      filter:url(#glow);
+      opacity:1;
+    }
+
+    75% {
+      opacity:0;
+    }
+
+    100% {
+      opacity:0;
+    }
+  }
+
+
+  /* =========================
+     CLARÃO
+     ========================= */
+
+  .flash {
+    opacity:0;
+    animation:flash 14s infinite;
+  }
+
+  @keyframes flash {
+
+    0%,68% {
+      opacity:0;
+      r:0;
+    }
+
+    72% {
+      opacity:1;
+      r:190;
+    }
+
+    78% {
+      opacity:0;
+      r:300;
+    }
+
+    100% {
+      opacity:0;
+    }
+  }
+
+
+  /* =========================
+     DRAGÃO
+     ========================= */
+
+  .dragon {
+    opacity:0;
+    transform-origin:400px 145px;
+    animation:dragon 14s infinite;
+  }
+
+  @keyframes dragon {
+
+    0%,74% {
+      opacity:0;
+      transform:scale(.7);
+    }
+
+    80% {
+      opacity:.45;
+      transform:scale(1);
+    }
+
+    94% {
+      opacity:.45;
+      transform:scale(1.03);
+    }
+
+    100% {
+      opacity:0;
+      transform:scale(1.08);
+    }
+  }
+
+
+  /* =========================
+     TEXTO
+     ========================= */
+
+  .message {
+    opacity:0;
+    text-anchor:middle;
+    font-family:monospace;
+    animation:message 14s infinite;
+  }
+
+  @keyframes message {
+
+    0%,78% {
+      opacity:0;
+    }
+
+    83%,95% {
+      opacity:1;
+    }
+
+    100% {
+      opacity:0;
+    }
+  }
+
+  .title {
+    fill:#66bb6a;
+    font-size:30px;
+    font-weight:bold;
+  }
+
+  .terminal {
+    fill:#8bc34a;
+    font-size:16px;
+  }
+
+</style>
+
+
+<!-- =========================
+     7 ESFERAS
+     ========================= -->
+
+
+<!-- 1 -->
+
+<g class="dragonball b1">
+
+  <circle class="ball" cx="80" cy="75" r="36"/>
+
+  <text class="star" x="80" y="83">
+    ★
+  </text>
+
+</g>
+
+
+<!-- 2 -->
+
+<g class="dragonball b2">
+
+  <circle class="ball" cx="185" cy="75" r="36"/>
+
+  <text class="star" x="175" y="83">★</text>
+  <text class="star" x="195" y="83">★</text>
+
+</g>
+
+
+<!-- 3 -->
+
+<g class="dragonball b3">
+
+  <circle class="ball" cx="290" cy="75" r="36"/>
+
+  <text class="star" x="290" y="68">★</text>
+  <text class="star" x="278" y="91">★</text>
+  <text class="star" x="302" y="91">★</text>
+
+</g>
+
+
+<!-- 4 -->
+
+<g class="dragonball b4">
+
+  <circle class="ball" cx="395" cy="75" r="36"/>
+
+  <text class="star" x="383" y="68">★</text>
+  <text class="star" x="407" y="68">★</text>
+
+  <text class="star" x="383" y="91">★</text>
+  <text class="star" x="407" y="91">★</text>
+
+</g>
+
+
+<!-- 5 -->
+
+<g class="dragonball b5">
+
+  <circle class="ball" cx="500" cy="75" r="36"/>
+
+  <text class="star" x="488" y="63">★</text>
+  <text class="star" x="512" y="63">★</text>
+
+  <text class="star" x="500" y="83">★</text>
+
+  <text class="star" x="488" y="101">★</text>
+  <text class="star" x="512" y="101">★</text>
+
+</g>
+
+
+<!-- 6 -->
+
+<g class="dragonball b6">
+
+  <circle class="ball" cx="605" cy="75" r="36"/>
+
+  <text class="star" x="593" y="60">★</text>
+  <text class="star" x="617" y="60">★</text>
+
+  <text class="star" x="593" y="83">★</text>
+  <text class="star" x="617" y="83">★</text>
+
+  <text class="star" x="593" y="106">★</text>
+  <text class="star" x="617" y="106">★</text>
+
+</g>
+
+
+<!-- 7 -->
+
+<g class="dragonball b7">
+
+  <circle class="ball" cx="710" cy="75" r="36"/>
+
+  <text class="star" x="698" y="57">★</text>
+  <text class="star" x="722" y="57">★</text>
+
+  <text class="star" x="686" y="80">★</text>
+  <text class="star" x="710" y="80">★</text>
+  <text class="star" x="734" y="80">★</text>
+
+  <text class="star" x="698" y="103">★</text>
+  <text class="star" x="722" y="103">★</text>
+
+</g>
+
+
+<!-- =========================
+     DRAGÃO
+     ========================= -->
+
+<g class="dragon">
+
+  <!-- CORPO LONGO E ENROLADO -->
+  <path
+    d="
+      M105 220
+      C120 125 220 95 285 145
+      C340 188 305 240 245 225
+      C190 210 205 155 270 145
+
+      C355 130 405 205 465 205
+      C535 205 570 140 535 105
+      C500 70 445 100 460 140
+
+      C475 175 545 170 590 125
+      C620 95 635 72 650 62
+    "
+    fill="none"
+    stroke="#43a047"
+    stroke-width="22"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- BARRIGA -->
+  <path
+    d="
+      M112 216
+      C130 145 205 118 267 151
+    "
+    fill="none"
+    stroke="#d6d77c"
+    stroke-width="8"
+    stroke-linecap="round"
+    opacity=".9"
+  />
+
+
+  <!-- PESCOÇO -->
+  <path
+    d="
+      M585 128
+      C620 105 635 80 650 62
+    "
+    fill="none"
+    stroke="#43a047"
+    stroke-width="25"
+    stroke-linecap="round"
+  />
+
+
+  <!-- CABEÇA -->
+  <path
+    d="
+      M635 70
+
+      Q650 40 680 48
+
+      Q706 51 716 69
+
+      L704 78
+
+      Q720 88 708 100
+
+      Q686 116 655 103
+
+      Q632 94 635 70
+
+      Z
+    "
+    fill="#43a047"
+    stroke="#2e7d32"
+    stroke-width="3"
+  />
+
+
+  <!-- FOCINHO -->
+  <path
+    d="
+      M681 77
+      Q718 72 731 87
+      Q716 105 680 98
+      Z
+    "
+    fill="#66bb6a"
+    stroke="#2e7d32"
+    stroke-width="3"
+  />
+
+
+  <!-- NARIZ -->
+  <circle
+    cx="713"
+    cy="87"
+    r="2.5"
+    fill="#1b5e20"
+  />
+
+
+  <!-- OLHO -->
+  <path
+    d="
+      M676 66
+      Q686 60 695 67
+      Q686 76 676 66
+    "
+    fill="#f5f5f5"
+  />
+
+  <circle
+    cx="687"
+    cy="67"
+    r="4"
+    fill="#d50000"
+  />
+
+
+  <!-- SOBRANCELHA -->
+  <path
+    d="M672 59 Q686 52 700 59"
+    fill="none"
+    stroke="#1b5e20"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+
+  <!-- CHIFRE ESQUERDO -->
+  <path
+    d="
+      M650 53
+      Q632 23 646 8
+      Q653 28 664 49
+    "
+    fill="#f1e5b9"
+    stroke="#bcae82"
+    stroke-width="3"
+  />
+
+
+  <!-- CHIFRE DIREITO -->
+  <path
+    d="
+      M684 51
+      Q694 20 714 10
+      Q706 35 700 57
+    "
+    fill="#f1e5b9"
+    stroke="#bcae82"
+    stroke-width="3"
+  />
+
+
+  <!-- BIGODE ESQUERDO -->
+  <path
+    d="
+      M685 91
+      C640 92 615 115 590 142
+    "
+    fill="none"
+    stroke="#f5f5dc"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+
+  <!-- BIGODE DIREITO -->
+  <path
+    d="
+      M695 94
+      C730 105 744 127 755 150
+    "
+    fill="none"
+    stroke="#f5f5dc"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+
+
+  <!-- ANTENAS / BIGODES SUPERIORES -->
+  <path
+    d="
+      M660 57
+      C630 37 610 38 590 48
+    "
+    fill="none"
+    stroke="#43a047"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="
+      M697 59
+      C725 43 748 47 766 60
+    "
+    fill="none"
+    stroke="#43a047"
+    stroke-width="5"
+    stroke-linecap="round"
+  />
+
+
+  <!-- BRAÇO -->
+  <path
+    d="
+      M510 178
+      Q540 195 557 215
+    "
+    fill="none"
+    stroke="#43a047"
+    stroke-width="12"
+    stroke-linecap="round"
+  />
+
+
+  <!-- GARRAS -->
+  <path
+    d="M555 214 L568 225"
+    stroke="#f1e5b9"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M555 214 L559 231"
+    stroke="#f1e5b9"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+  <path
+    d="M555 214 L548 229"
+    stroke="#f1e5b9"
+    stroke-width="4"
+    stroke-linecap="round"
+  />
+
+</g>
+
+<!-- =========================
+     CLARÃO
+     ========================= -->
+
+<circle
+  class="flash"
+  cx="400"
+  cy="185"
+  r="0"
+  fill="url(#flashGradient)"/>
+
+
+<!-- =========================
+     TEXTO FINAL
+     ========================= -->
+
+<g class="message">
+
+  <text
+    class="title"
+    x="400"
+    y="205">
+
+    SHENLONG.EXE
+
+  </text>
+
+  <text
+    class="terminal"
+    x="400"
+    y="235">
+
+    &gt; 7 Dragon Balls collected
+
+  </text>
+
+  <text
+    class="terminal"
+    x="400"
+    y="260">
+
+    &gt; Summoning complete_
+
+  </text>
+
+</g>
 
 </svg>
