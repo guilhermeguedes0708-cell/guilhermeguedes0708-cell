@@ -1,0 +1,78 @@
+<svg width="800" height="180"
+     viewBox="0 0 800 180"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .ball {
+      fill: #ff9d00;
+      stroke: #ffcc4d;
+      stroke-width: 3;
+      animation: glow 1.5s infinite alternate;
+    }
+
+    .star {
+      fill: #d62828;
+      font-size: 25px;
+      text-anchor: middle;
+    }
+
+    @keyframes glow {
+      from {
+        filter: drop-shadow(0 0 2px #ff9d00);
+      }
+      to {
+        filter: drop-shadow(0 0 10px #ffd500);
+      }
+    }
+  </style>
+
+  <!-- 1 estrela -->
+  <circle class="ball" cx="80" cy="90" r="42"/>
+  <text class="star" x="80" y="99">★</text>
+
+  <!-- 2 estrelas -->
+  <circle class="ball" cx="185" cy="90" r="42"/>
+  <text class="star" x="175" y="99">★</text>
+  <text class="star" x="195" y="99">★</text>
+
+  <!-- 3 estrelas -->
+  <circle class="ball" cx="290" cy="90" r="42"/>
+  <text class="star" x="290" y="82">★</text>
+  <text class="star" x="278" y="105">★</text>
+  <text class="star" x="302" y="105">★</text>
+
+  <!-- 4 estrelas -->
+  <circle class="ball" cx="395" cy="90" r="42"/>
+  <text class="star" x="383" y="82">★</text>
+  <text class="star" x="407" y="82">★</text>
+  <text class="star" x="383" y="105">★</text>
+  <text class="star" x="407" y="105">★</text>
+
+  <!-- 5 estrelas -->
+  <circle class="ball" cx="500" cy="90" r="42"/>
+  <text class="star" x="488" y="78">★</text>
+  <text class="star" x="512" y="78">★</text>
+  <text class="star" x="500" y="98">★</text>
+  <text class="star" x="488" y="116">★</text>
+  <text class="star" x="512" y="116">★</text>
+
+  <!-- 6 estrelas -->
+  <circle class="ball" cx="605" cy="90" r="42"/>
+  <text class="star" x="593" y="75">★</text>
+  <text class="star" x="617" y="75">★</text>
+  <text class="star" x="593" y="98">★</text>
+  <text class="star" x="617" y="98">★</text>
+  <text class="star" x="593" y="121">★</text>
+  <text class="star" x="617" y="121">★</text>
+
+  <!-- 7 estrelas -->
+  <circle class="ball" cx="710" cy="90" r="42"/>
+  <text class="star" x="698" y="72">★</text>
+  <text class="star" x="722" y="72">★</text>
+  <text class="star" x="686" y="95">★</text>
+  <text class="star" x="710" y="95">★</text>
+  <text class="star" x="734" y="95">★</text>
+  <text class="star" x="698" y="118">★</text>
+  <text class="star" x="722" y="118">★</text>
+
+</svg>
